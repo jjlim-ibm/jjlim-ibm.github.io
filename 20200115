@@ -15,16 +15,31 @@
 - iso 작업 - cassandra memory
 - iso 및 OVA 업로드 후 인프라 알림
 - 작업 완료 확인
-- ntp 작업
-- analytics 작업 및 기존 devops 사용자 생성
-- org/catalog/consumer org
+- time 작업
+  # timedatectl set-timezone Asia/Seoul
+  # timedatectl set-ntp no
+  # 이미지 copy
+  # dpkg -i 
+  # vi /etc/ntp.conf
+  # systemctl restart ntp
+  # ntpq -p
+- Cloud Manager analytics 작업
+- 기존 devops 사용자 생성
+  # apic registrations:create --server apic.ibm.com app1.json
+  {
+  "name": "app1",
+  "client_id": "app1id", 
+  "client_secret": "app1secret",
+  "client_type": "toolkit"
+  }
+- org/catalog/consumer org 생성
 - space 생성 - gateway assign - app 생성 (id/secret)
-# POST https://pf.../api/consumer-orgs/skhy/internal/{space}/skhy/apps
-{ 
-"name": "",
-"client_id": "",
-"client_secret": ""
-}
+  # POST https://pf.../api/consumer-orgs/skhy/internal/{space}/skhy/apps
+  { 
+  "name": "",
+  "client_id": "",
+  "client_secret": ""
+  }
 
 < PROD Gateway upgrade >
 
