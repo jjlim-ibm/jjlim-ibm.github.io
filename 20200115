@@ -1,13 +1,36 @@
-# PROD 도메인 변경
+# Gateway 사전 작업
+
+- docker image load
+- PROD/DEV Gateway DNS 점검
+- PROD/DEV apicup
+- PROD/DEV Helm chart load
+- PROD/DEV secret 생성
+
+# PROD 도메인 변경 - Manager, Analytics
+
 - DNS 점검 - nslookup
 - 기존 Cloud Manager analytics 정보 확인
 - 기존 CI/CD devops 사용자 id/password 확인
+- 기존 internal catalog consumer org 확인
 - iso 작업 - cassandra memory
 - iso 및 OVA 업로드 후 인프라 알림
 - 작업 완료 확인
 - ntp 작업
 - analytics 및 기존 devops 사용자 생성
-- org 생성
-- catalog 생성
-- consumer org 생성
+- org/catalog/consumer org
 - space 생성 - gateway assign - app 생성 (id/secret)
+
+# PROD Gateway upgrade
+
+- Helm upgrade
+- 호출 확인
+
+# DEV upgrade - Manager, Analytics
+- DNS 점검 - nslookup
+- upgrade 작업
+- 작업 완료 확인
+
+# DEV Gateway upgrade
+
+- Helm upgrade
+- 호출 확인
