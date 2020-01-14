@@ -4,7 +4,7 @@
 - PROD/DEV Gateway DNS 점검
 - PROD/DEV apicup
 - PROD/DEV Helm chart load
-- PROD/DEV secret 생성
+- PROD/DEV Gateway Service secret 생성
 
 < PROD 도메인 변경 - Manager, Analytics > 
 
