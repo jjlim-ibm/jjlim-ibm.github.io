@@ -1,4 +1,4 @@
-# Gateway 사전 작업
+< Gateway 사전 작업 >
 
 - docker image load
 - PROD/DEV Gateway DNS 점검
@@ -6,7 +6,7 @@
 - PROD/DEV Helm chart load
 - PROD/DEV secret 생성
 
-# PROD 도메인 변경 - Manager, Analytics
+< PROD 도메인 변경 - Manager, Analytics > 
 
 - DNS 점검 - nslookup
 - 기존 Cloud Manager analytics 정보 확인
@@ -16,21 +16,29 @@
 - iso 및 OVA 업로드 후 인프라 알림
 - 작업 완료 확인
 - ntp 작업
-- analytics 및 기존 devops 사용자 생성
+- analytics 작업 및 기존 devops 사용자 생성
 - org/catalog/consumer org
 - space 생성 - gateway assign - app 생성 (id/secret)
+# POST https://pf.../api/consumer-orgs/skhy/internal/{space}/skhy/apps
+{ 
+"name": "",
+"client_id": "",
+"client_secret": ""
+}
 
-# PROD Gateway upgrade
+< PROD Gateway upgrade >
 
 - Helm upgrade
+- keystore 및 TLS Server Profile 작성
 - 호출 확인
 
-# DEV upgrade - Manager, Analytics
+< DEV upgrade - Manager, Analytics >
 - DNS 점검 - nslookup
 - upgrade 작업
 - 작업 완료 확인
 
-# DEV Gateway upgrade
+< DEV Gateway upgrade >
 
 - Helm upgrade
+- keystore 및 TLS Server Profile 작성
 - 호출 확인
